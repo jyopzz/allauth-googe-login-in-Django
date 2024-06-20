@@ -1,0 +1,22 @@
+{% extends "account/base_entrance.html" %}
+{% load socialaccount %}
+{% load allauth i18n %}
+{% block head_title %}
+    {% trans "Signup" %}
+{% endblock head_title %}
+{% block content %}
+    {% element h1 %}
+        {% trans "Sign Up" %}
+    {% endelement %}
+    {% setvar link %}
+        <a href="{% provider_login_url 'google' %}">
+        {% endsetvar %}
+        {% setvar end_link %}
+        </a>
+    {% endsetvar %}
+    {% element p %}
+        {% blocktranslate %}Already have an account or Signup with Google  {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
+    {% endelement %}
+    
+    
+{% endblock content %}

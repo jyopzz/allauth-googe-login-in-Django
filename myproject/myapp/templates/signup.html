@@ -1,0 +1,16 @@
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <h3>Sign Up</h3> 
+
+    <div class="alert alert-danger" role="alert">
+        <a href="{% provider_login_url 'google' %}" class="alert-link">signup with Google/Login</a>
+     </div>
+</body>
+</html>
